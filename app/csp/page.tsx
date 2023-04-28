@@ -12,10 +12,23 @@ export default function Home() {
             (<code>content-security-policy</code>)
           </small>
         </h2>
-        <p>
-          <code>x-nonce</code> header:{' '}
-          <code>{headersList.get('x-nonce') || 'Not found'}</code>
-        </p>
+
+        <dl>
+          <dt>
+            <code className="font-bold">x-nonce</code> header:
+          </dt>
+          <dd className="mb-8">
+            <code>{headersList.get('x-nonce') || 'Not found'}</code>
+          </dd>
+          <dt>
+            <code className="font-bold">content-security-policy</code> header:
+          </dt>
+          <dd className="mb-8">
+            <pre className="whitespace-pre-wrap">
+              <code>{headersList.get('content-security-policy')}</code>
+            </pre>
+          </dd>
+        </dl>
       </div>
 
       <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
