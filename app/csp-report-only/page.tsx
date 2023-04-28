@@ -13,7 +13,8 @@ export default function Home() {
           </small>
         </h2>
         <p>
-          Nonce: <code>{headersList.get('x-nonce') || 'Not found'}</code>
+          <code>x-nonce</code>:{' '}
+          <code>{headersList.get('x-nonce') || 'Not found'}</code>
         </p>
       </div>
 
