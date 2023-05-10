@@ -51,6 +51,8 @@ export async function middleware(request: NextRequest) {
   requestHeaders.set('x-nonce', nonce);
 
   // set CSP header
+  // switching for report-only or regular for repro on
+  // https://github.com/vercel/next.js/issues/48966
   const headerKey =
     request.nextUrl.pathname === '/csp-report-only'
       ? 'content-security-policy-report-only'
