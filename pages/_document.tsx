@@ -13,9 +13,9 @@ export default function PagesDocument(
   const { nonce } = props;
 
   return (
-    <Html lang="en">
+    <Html lang="en" className="h-full bg-white">
       <Head nonce={nonce} />
-      <body data-nonce={nonce}>
+      <body data-nonce={nonce} className={`h-full`}>
         <Main />
         <NextScript nonce={nonce} />
       </body>
